@@ -1,85 +1,43 @@
-# ========================================
-# QUICK GITHUB REPOSITORY SETUP
-# ========================================
-# Run these commands in PowerShell/Terminal
+# 🚨 TrackTots — Emergency IoT Monitoring System with Blockchain
 
-# Navigate to your project
-cd C:\Users\Ramchandra\Desktop\tracktots_modern
+A decentralized, real-time **emergency alert and monitoring system** built using **ESP32 IoT nodes** and the **Stellar Blockchain** for tamper-proof, transparent emergency data logging.
 
-# Initialize Git (if not already done)
-git init
+---
 
-# Create .gitignore file
-echo "node_modules/" > .gitignore
-echo ".env" >> .gitignore
-echo "build/" >> .gitignore
-echo "dist/" >> .gitignore
-echo ".DS_Store" >> .gitignore
-echo "*.log" >> .gitignore
-echo "frontend/build/" >> .gitignore
-echo "backend/node_modules/" >> .gitignore
-echo "frontend/node_modules/" >> .gitignore
+## 🌍 Overview
 
-# Create .env.example files for backend
-cd backend
-echo "PORT=8080" > .env.example
-echo "STELLAR_SECRET_KEY=SXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" >> .env.example
-echo "STELLAR_DESTINATION=GXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" >> .env.example
+**TrackTots** is designed to detect and report emergencies such as abnormal health conditions, sound disturbances, or manual distress signals from IoT devices in the field.  
+Each alert is securely transmitted to a decentralized blockchain network (Stellar Testnet) and displayed on a live **React Dashboard** with **Google Maps** integration.
 
-# Create .env.example files for frontend
-cd ../frontend
-echo "REACT_APP_API_URL=http://localhost:8080" > .env.example
-echo "REACT_APP_GOOGLE_MAPS_KEY=AIzaXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" >> .env.example
+---
 
-# Go back to root
-cd ..
+## ⚙️ Tech Stack
 
-# Create LICENSE file
-echo "MIT License" > LICENSE
-echo "" >> LICENSE
-echo "Copyright (c) 2025 [Your Name]" >> LICENSE
-echo "" >> LICENSE
-echo "Permission is hereby granted, free of charge, to any person obtaining a copy" >> LICENSE
-echo "of this software and associated documentation files (the \"Software\"), to deal" >> LICENSE
-echo "in the Software without restriction, including without limitation the rights" >> LICENSE
-echo "to use, copy, modify, merge, publish, distribute, sublicense, and/or sell" >> LICENSE
-echo "copies of the Software, and to permit persons to whom the Software is" >> LICENSE
-echo "furnished to do so, subject to the following conditions:" >> LICENSE
-echo "" >> LICENSE
-echo "The above copyright notice and this permission notice shall be included in all" >> LICENSE
-echo "copies or substantial portions of the Software." >> LICENSE
-echo "" >> LICENSE
-echo "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR" >> LICENSE
-echo "IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY," >> LICENSE
-echo "FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE" >> LICENSE
-echo "AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER" >> LICENSE
-echo "LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM," >> LICENSE
-echo "OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE" >> LICENSE
-echo "SOFTWARE." >> LICENSE
+### 🧠 Hardware (IoT Layer)
+- **ESP32** — Central microcontroller  
+- **MAX30100** — Heart rate and SpO₂ sensor  
+- **KY-038** — Sound detection sensor  
+- **Push Button** — Manual SOS trigger  
+- **NEO-6M GPS** — Location tracking  
+- **SIM800L GSM** — SMS & mobile data communication  
 
-# Add all files to git
-git add .
+### 🌐 Software (Cloud & App Layer)
+- **Backend:** Node.js + Express + Stellar SDK  
+- **Frontend:** React + TailwindCSS + Google Maps API  
+- **Blockchain:** Stellar Testnet (via Soroban smart contracts)  
+- **Database (optional):** MongoDB or local JSON logs  
 
-# Create initial commit
-git commit -m "Initial commit: Emergency IoT Monitoring System with Blockchain"
+---
 
-# ========================================
-# NOW GO TO GITHUB.COM AND:
-# 1. Click "New Repository"
-# 2. Name it: emergency-iot-monitor
-# 3. Don't initialize with README
-# 4. Click "Create repository"
-# 5. Copy the repository URL
-# ========================================
+## 🔐 Key Features
 
-# Then run these commands (replace YOUR_USERNAME and YOUR_REPO):
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-git branch -M main
-git push -u origin main
+✅ Real-time IoT emergency alerts  
+✅ On-chain alert logging (Stellar Testnet)  
+✅ Web Dashboard with live map & alert history  
+✅ Secure wallet login using Freighter Wallet  
+✅ Decentralized data — No single-point failure  
+✅ SMS & push-based alerts (via GSM + API)  
 
-# ========================================
-# DONE! Your repo is live on GitHub! 🎉
-# ========================================
+---
 
-# Optional: Add topics/tags on GitHub:
-# iot, esp32, blockchain, stellar, react, nodejs, health-monitoring, emergency-system
+## 🖥️ System Architecture
