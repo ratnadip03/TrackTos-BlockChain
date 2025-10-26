@@ -41,3 +41,112 @@ Each alert is securely transmitted to a decentralized blockchain network (Stella
 ---
 
 ## 🖥️ System Architecture
+
+
+ESP32 Sensors → GSM/GPS → Backend (Node.js) → Stellar Blockchain → React Dashboard
+
+
+- IoT node sends data via GSM/WiFi  
+- Backend verifies and stores alert  
+- Blockchain stores tamper-proof log  
+- Frontend visualizes data in real-time  
+
+---
+
+## 🧩 Folder Structure
+
+
+
+tracktots_modern/
+│
+├── backend/
+│ ├── server.js
+│ ├── routes/
+│ ├── controllers/
+│ ├── .env.example
+│ └── package.json
+│
+├── frontend/
+│ ├── src/
+│ ├── public/
+│ ├── .env.example
+│ └── package.json
+│
+└── LICENSE
+
+
+---
+
+## ⚙️ Installation
+
+### Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/emergency-iot-monitor.git
+cd emergency-iot-monitor
+
+Backend setup
+cd backend
+npm install
+cp .env.example .env
+npm start
+
+Frontend setup
+cd ../frontend
+npm install
+cp .env.example .env
+npm start
+
+
+Then open 👉 http://localhost:3000
+
+🌐 Environment Variables
+Backend .env.example
+PORT=8080
+STELLAR_SECRET_KEY=SXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+STELLAR_DESTINATION=GXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Frontend .env.example
+REACT_APP_API_URL=http://localhost:8080
+REACT_APP_GOOGLE_MAPS_KEY=AIzaXXXXXXXXXXXXXXXXXXXXX
+
+🧱 Blockchain Integration (Stellar)
+
+All emergency alerts are stored as transactions on the Stellar Testnet.
+
+Each alert includes:
+
+Device ID
+
+Timestamp
+
+GPS coordinates
+
+Alert type (Heartbeat anomaly / Sound / Manual SOS)
+
+Use Freighter Wallet to log in and verify your on-chain alert proof.
+
+📍 Dashboard Preview
+
+The React dashboard displays:
+
+Live map with alert markers
+
+Device status indicators
+
+Blockchain transaction details
+
+Timestamped alert history
+
+(Screenshot placeholder — add image here later)
+
+🧾 License
+
+This project is licensed under the MIT License — see the LICENSE
+ file for details.
+
+✨ Contributors
+
+Developer: Ratnadeep Ramachandra Gosavi
+
+College: D.Y. Patil College of Engineering and Technology, Kolhapur
+Year: 2025
